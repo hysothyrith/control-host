@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Control Host</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body style="-webkit-app-region: drag">
+    <div class="root">
+      <header class="header">
+        <img width="20" src="assets/logo.svg" alt="Control Host logo" />
+        <h1>Control Host</h1>
+      </header>
+      <div id="status-box" class="status-box">
+        <span id="status-message" class="status__message">Welcome</span>
+        <button id="copy-button" class="button button--sm copy__button">
+          Copy
+        </button>
+      </div>
+      <form id="main-form" class="form">
+        <div class="input-group">
+          <label for="token-input" class="label">Ngrok Authtoken</label>
+          <input type="password" id="token-input" class="input" />
+        </div>
+        <div class="input-group">
+          <label for="region-select" class="label">Ngrok region</label>
+          <select id="region-select" class="select">
+            <option value="us">United States</option>
+            <option value="eu">Europe</option>
+            <option value="ap">Asia/Pacific</option>
+            <option value="au">Australia</option>
+            <option value="sa">South America</option>
+            <option value="jp">Japan</option>
+            <option value="in">India</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="port-input" class="label">Localhost port</label>
+          <input
+            type="number"
+            id="port-input"
+            value="80"
+            class="input port__input"
+          />
+        </div>
+        <button id="switch-button" type="submit" class="button switch__button">
+          Start
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
